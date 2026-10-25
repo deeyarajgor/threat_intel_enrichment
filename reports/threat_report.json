@@ -1,0 +1,54 @@
+[
+    {
+        "ip": "8.8.8.8",
+        "status": "success",
+        "reputation": 564,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 39,
+            "harmless": 53,
+            "timeout": 0
+        }
+    },
+    {
+        "ip": "1.1.1.1",
+        "status": "success",
+        "reputation": 115,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 35,
+            "harmless": 57,
+            "timeout": 0
+        }
+    },
+    {
+        "ip": "185.220.101.1",
+        "status": "success",
+        "reputation": 3,
+        "last_analysis_stats": {
+            "malicious": 14,
+            "suspicious": 4,
+            "undetected": 28,
+            "harmless": 46,
+            "timeout": 0
+        }
+    },
+    {
+        "ip": "203.0.113.10",
+        "status": "success",
+        "reputation": 0,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 39,
+            "harmless": 53,
+            "timeout": 0
+        }
+    },
+    {
+        "ip": "invalid-ip",
+        "status": "invalid"
+    }
+]
