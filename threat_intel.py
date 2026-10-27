@@ -10,6 +10,23 @@ load_dotenv() #reads variables from .env file and makes them available in the en
 API_KEY = os.getenv("VT_API_KEY")
 BASE_URL = "https://www.virustotal.com/api/v3/ip_addresses/"
 
+#the function below receives the detection statistics from VirusTotal and classifies the threat level based on the number of malicious detections.
+def classify_threat(stats):
+    """Classify an IP using VirusTotal detection statistics."""
+    if not stats or "malicious" not in stats:
+        return "Unknown"
+
+    malicious = stats["malicious"]
+
+    if malicious >= 10:
+        return "High"
+    elif malicious >= 3:
+        return "Medium"
+    elif malicious >= 1:
+        return "Low"
+    else:
+        return "No detections"
+
 #the functions below are used to load IOCs from a text file, validate IP addresses, and retrieve reputation data from VirusTotal.
 def load_iocs(filename):
     """Read IP addresses from a text file."""
@@ -88,17 +105,20 @@ def main():
         #extract relevant data from the API response:
         attributes = result.get("data", {}).get("attributes", {})
         stats = attributes.get("last_analysis_stats", {})
+        classification = classify_threat(stats)
         report.append({
             "ip": ip,
             "status": "success",
             "reputation": attributes.get("reputation", 0),
             "last_analysis_stats": stats,
+            "threat_classification": classification,
         })
         print(f"  Reputation: {attributes.get('reputation', 'N/A')}")
         print(f"  Malicious detections: {stats.get('malicious', 'N/A')}")
         print(f"  Suspicious detections: {stats.get('suspicious', 'N/A')}")
         print(f"  Harmless detections: {stats.get('harmless', 'N/A')}")
         print(f"  Undetected: {stats.get('undetected', 'N/A')}")
+        print(f"  Threat Classification: {classification}")
         reports_dir = Path("reports")
     reports_dir.mkdir(exist_ok=True)
 

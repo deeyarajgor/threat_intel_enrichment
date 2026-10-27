@@ -9,7 +9,8 @@
             "undetected": 39,
             "harmless": 53,
             "timeout": 0
-        }
+        },
+        "threat_classification": "No detections"
     },
     {
         "ip": "1.1.1.1",
@@ -21,19 +22,21 @@
             "undetected": 35,
             "harmless": 57,
             "timeout": 0
-        }
+        },
+        "threat_classification": "No detections"
     },
     {
         "ip": "185.220.101.1",
         "status": "success",
         "reputation": 3,
         "last_analysis_stats": {
-            "malicious": 14,
-            "suspicious": 4,
+            "malicious": 15,
+            "suspicious": 3,
             "undetected": 28,
             "harmless": 46,
             "timeout": 0
-        }
+        },
+        "threat_classification": "High"
     },
     {
         "ip": "203.0.113.10",
@@ -42,10 +45,11 @@
         "last_analysis_stats": {
             "malicious": 0,
             "suspicious": 0,
-            "undetected": 39,
-            "harmless": 53,
+            "undetected": 38,
+            "harmless": 54,
             "timeout": 0
-        }
+        },
+        "threat_classification": "No detections"
     },
     {
         "ip": "invalid-ip",
