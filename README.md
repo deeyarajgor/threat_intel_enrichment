@@ -42,14 +42,7 @@ threat_intel_enrichment/
 
 ## Installation
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/deeyarajgor/threat_intel_enrichment.git
-   cd threat_intel_enrichment
-   ```
-
-2. Install the dependencies:
+1. Install the dependencies:
 
    ```bash
    py -m pip install -r requirements.txt
@@ -57,15 +50,15 @@ threat_intel_enrichment/
 
    On Linux or macOS, use `python3` instead of `py` if necessary.
 
-3. Create a `.env` file in the project root and add your VirusTotal API key:
+2. Create a `.env` file in the project root and add your VirusTotal API key:
 
    ```text
    VT_API_KEY=your_virustotal_api_key
    ```
 
-   Replace the placeholder with your own API key. Never publish your actual key or commit the `.env` file to GitHub.
+   Replace the placeholder with your own API key. 
 
-4. Add IP addresses to `sample_iocs.txt`, with one address per line.
+3. Add IP addresses to `sample_iocs.txt`, with one address per line.
 
 ## Usage
 
