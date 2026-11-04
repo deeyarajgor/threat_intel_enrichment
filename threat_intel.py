@@ -105,6 +105,11 @@ def main():
         #extract relevant data from the API response:
         attributes = result.get("data", {}).get("attributes", {})
         stats = attributes.get("last_analysis_stats", {})
+        country = attributes.get("country", "N/A")
+        continent = attributes.get("continent", "N/A")
+        asn = attributes.get("asn", "N/A")
+        as_owner = attributes.get("as_owner", "N/A")
+        network = attributes.get("network", "N/A")
         classification = classify_threat(stats)
         report.append({
             "ip": ip,
@@ -112,8 +117,18 @@ def main():
             "reputation": attributes.get("reputation", 0),
             "last_analysis_stats": stats,
             "threat_classification": classification,
+            "country": country,
+            "continent": continent,
+            "asn": asn,
+            "as_owner": as_owner,
+            "network": network,
         })
         print(f"  Reputation: {attributes.get('reputation', 'N/A')}")
+        print(f"  Country: {country}")
+        print(f"  Continent: {continent}")
+        print(f"  ASN: {asn}")
+        print(f"  AS Owner: {as_owner}")
+        print(f"  Network: {network}")
         print(f"  Malicious detections: {stats.get('malicious', 'N/A')}")
         print(f"  Suspicious detections: {stats.get('suspicious', 'N/A')}")
         print(f"  Harmless detections: {stats.get('harmless', 'N/A')}")

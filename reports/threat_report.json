@@ -4,26 +4,36 @@
         "status": "success",
         "reputation": 564,
         "last_analysis_stats": {
-            "malicious": 0,
+            "malicious": 1,
             "suspicious": 0,
-            "undetected": 39,
-            "harmless": 53,
+            "undetected": 34,
+            "harmless": 57,
             "timeout": 0
         },
-        "threat_classification": "No detections"
+        "threat_classification": "Low",
+        "country": "US",
+        "continent": "NA",
+        "asn": 15169,
+        "as_owner": "Google LLC",
+        "network": "8.8.8.0/24"
     },
     {
         "ip": "1.1.1.1",
         "status": "success",
-        "reputation": 115,
+        "reputation": 117,
         "last_analysis_stats": {
-            "malicious": 0,
+            "malicious": 1,
             "suspicious": 0,
-            "undetected": 35,
+            "undetected": 34,
             "harmless": 57,
             "timeout": 0
         },
-        "threat_classification": "No detections"
+        "threat_classification": "Low",
+        "country": "N/A",
+        "continent": "N/A",
+        "asn": 13335,
+        "as_owner": "Cloudflare, Inc.",
+        "network": "1.1.1.0/24"
     },
     {
         "ip": "185.220.101.1",
@@ -32,11 +42,16 @@
         "last_analysis_stats": {
             "malicious": 15,
             "suspicious": 3,
-            "undetected": 28,
-            "harmless": 46,
+            "undetected": 26,
+            "harmless": 48,
             "timeout": 0
         },
-        "threat_classification": "High"
+        "threat_classification": "High",
+        "country": "DE",
+        "continent": "EU",
+        "asn": 60729,
+        "as_owner": "Stiftung Erneuerbare Freiheit",
+        "network": "185.220.101.0/24"
     },
     {
         "ip": "203.0.113.10",
@@ -49,7 +64,84 @@
             "harmless": 54,
             "timeout": 0
         },
-        "threat_classification": "No detections"
+        "threat_classification": "No detections",
+        "country": "N/A",
+        "continent": "N/A",
+        "asn": "N/A",
+        "as_owner": "N/A",
+        "network": "N/A"
+    },
+    {
+        "ip": "8.8.4.4",
+        "status": "success",
+        "reputation": 180,
+        "last_analysis_stats": {
+            "malicious": 1,
+            "suspicious": 1,
+            "undetected": 35,
+            "harmless": 55,
+            "timeout": 0
+        },
+        "threat_classification": "Low",
+        "country": "US",
+        "continent": "NA",
+        "asn": 15169,
+        "as_owner": "Google LLC",
+        "network": "8.8.4.0/24"
+    },
+    {
+        "ip": "1.0.0.1",
+        "status": "success",
+        "reputation": 120,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 37,
+            "harmless": 55,
+            "timeout": 0
+        },
+        "threat_classification": "No detections",
+        "country": "N/A",
+        "continent": "N/A",
+        "asn": 13335,
+        "as_owner": "Cloudflare, Inc.",
+        "network": "1.0.0.0/24"
+    },
+    {
+        "ip": "9.9.9.9",
+        "status": "success",
+        "reputation": 10,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 1,
+            "undetected": 35,
+            "harmless": 56,
+            "timeout": 0
+        },
+        "threat_classification": "No detections",
+        "country": "N/A",
+        "continent": "N/A",
+        "asn": 19281,
+        "as_owner": "Quad9",
+        "network": "9.9.9.0/24"
+    },
+    {
+        "ip": "208.67.222.222",
+        "status": "success",
+        "reputation": 56,
+        "last_analysis_stats": {
+            "malicious": 0,
+            "suspicious": 0,
+            "undetected": 36,
+            "harmless": 56,
+            "timeout": 0
+        },
+        "threat_classification": "No detections",
+        "country": "US",
+        "continent": "NA",
+        "asn": 36692,
+        "as_owner": "Cisco OpenDNS, LLC",
+        "network": "208.67.216.0/21"
     },
     {
         "ip": "invalid-ip",
