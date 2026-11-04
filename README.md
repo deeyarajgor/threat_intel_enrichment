@@ -60,6 +60,49 @@ threat_intel_enrichment/
 
 3. Add IP addresses to `sample_iocs.txt`, with one address per line.
 
+## Interactive Dashboard
+
+The project includes an interactive dashboard built with Streamlit to present and explore the threat intelligence results.
+
+### Dashboard Features
+
+- Summary metrics showing the number of analysed IPs and their threat classifications.
+- Visualisation of threat classification distribution.
+- Aggregated VirusTotal detection statistics.
+- IP investigation table with filtering by classification.
+- Detailed IP information, including country, ASN, network and organisation.
+- Downloadable JSON threat reports.
+
+### Running the Dashboard
+
+1. Install the project dependencies:
+
+   ```bash
+   py -m pip install -r requirements.txt
+   ```
+
+2. Run the threat intelligence tool to generate the JSON report:
+
+   ```bash
+   py threat_intel.py
+   ```
+
+3. Launch the dashboard:
+
+   ```bash
+   py -m streamlit run dashboard.py
+   ```
+
+4. Open the local address displayed in the terminal, usually:
+
+   `http://localhost:8501`
+
+
+### Dashboard Preview
+
+![Threat Intelligence Dashboard](screenshots/dashboard.png)
+
+
 ## Usage
 
 Run the tool from the project directory:
